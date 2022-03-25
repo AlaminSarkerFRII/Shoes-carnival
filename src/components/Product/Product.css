@@ -1,0 +1,17 @@
+
+.product-info{
+    color:blue;
+}
+/* icons */
+
+.add-to-cart{
+    font-size: 15px;
+    background-color: aliceblue;
+    color:black;
+}
+
+.icons{
+    font-size: 20px;
+    margin-left: 5px;
+    color:black
+}
