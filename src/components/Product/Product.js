@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Button,Card } from 'react-bootstrap';
+import {BsCartPlus} from 'react-icons/bs'
 
 const Product = (props) => {
     console.log(props);
@@ -13,7 +14,10 @@ const Product = (props) => {
   <Card.Body>
     <Card.Title>{name}</Card.Title>
     <Card.Text> Price : ${price}</Card.Text>
-    <Button variant="primary">Go somewhere</Button>
+    <Button variant="primary">
+        <p>Add To Cart </p>
+        <BsCartPlus/> 
+    </Button>
   </Card.Body>
 </Card>
 
