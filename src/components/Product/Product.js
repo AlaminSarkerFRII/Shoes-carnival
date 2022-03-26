@@ -7,11 +7,9 @@ const Product = ({product,handleAddToCart}) => {
     
     const {name,price,img} = product
 
-
-
     return (
-        <div>
-    <Card style={{ width: '18rem' }}>
+       <div className ="p-4 col-12 col-md-4">
+    <Card>
   <Card.Img variant="top" src={img} />
   <Card.Body className="product-info">
     <Card.Title>{name}</Card.Title>
@@ -21,8 +19,7 @@ const Product = ({product,handleAddToCart}) => {
     </Button>
   </Card.Body>
 </Card>
-
-        </div>
+       </div>
     );
 };
 

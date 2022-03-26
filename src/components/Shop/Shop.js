@@ -4,29 +4,65 @@ import Product from '../Product/Product';
 import './Shop.css'
 
 
-
 const Shop = () => {
 
     const [products , setProducts] = useState([]);
-    const [cart,setCart ] = useState([])
+    const [cart,setCart ] = useState([]);
+    //rendom number
+
+    const [random, setRandom] = useState (-1);
 
     useEffect(() => {
-
         fetch('products.json')
         .then(res =>res.json())
         .then(data => setProducts(data)) 
 
     } ,[])
 
-    const handleAddToCart = (product) => {
-        const newCart = [...cart, product];
+    const handleAddToCart = (props) => {
+        // const newCart = [...cart, product];
+        let newCart = [];
+
+        let exist = cart.find(product =>product.name === props.name)
+
+        if(cart.length >=4){
+            alert('click 4  item only')
+        }
+        else if(!exist){
+            newCart = [...cart, props]
+        }
+        else{
+            alert("you already addedd cart")
+            cart.filter(product=> product.name !==props.name);
+            newCart = [...cart]
+        }
         setCart(newCart);
       };
 
-    return (
-        <div className='shop-container'>
+      //function rendom
 
-        <div className='products-container'>
+      const getRandomObject = cart[random]
+      console.log(getRandomObject)
+
+      const getRandomNumber = () =>{
+        setRandom (Math.floor(Math.random()*cart.length))
+        if(getRandomObject){
+        alert(`${getRandomObject?.name}`)
+    }
+        }
+
+        // reset cart function
+        const handleResetCart = () =>{
+            setCart([]);
+        }
+      
+
+    return (
+        <div className='row shop-container mx-auto'>
+
+        <div className='products-container col-12 col-md-9'>
+
+        <div className='row mt-5 g-4 mx-auto'>
         {
             products.map((product) => <Product 
             key={product.id}
@@ -36,7 +72,8 @@ const Shop = () => {
             </Product>)
         } 
         </div>
-            <div className='cart-container'>
+        </div>
+            <div className='cart-container col-12 col-md-3'>
                          <div className='mt-5'>
                             <h3>Selected Shoes </h3>
                     </div>          
@@ -48,8 +85,8 @@ const Shop = () => {
                         }
 
                         <div>
-                            <button className='btn-choose'>Choose 1 item</button> <br />
-                            <button className='btn-reset'>Reset Item</button>
+                            <button onClick={getRandomNumber} className='btn-choose'>Choose 1 item</button> <br />
+                            <button onClick={handleResetCart} className='btn-reset'>Reset Item</button>
                         </div>
             </div>
 

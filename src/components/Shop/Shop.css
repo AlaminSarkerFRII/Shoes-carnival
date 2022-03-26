@@ -1,19 +1,26 @@
-.shop-container{
-    display: grid;
-    grid-template-columns: 4fr 1fr;
+ .shop-container{
+  
+    overflow-x: hidden;
 
 }
 
-.products-container{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap:40px;
-    margin:100px 50px;
-    bottom: 0;
-}
 
 .cart-container{
     background-color: rgb(224, 157, 108);
+    height: fit-content;
+    margin-bottom: 30px;
+    margin-top: 0;
+    box-shadow: 2px 0 2px 0;
+}
+
+/* 
+@media only screen and (max-width: 600px){
+
+    .products-container{
+        grid-template-columns: 1fr 1fr ;
+
+    }
+    
 }
 
 
@@ -25,4 +32,4 @@
 
     }
     
-}
+} */

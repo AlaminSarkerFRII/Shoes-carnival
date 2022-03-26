@@ -1,9 +1,10 @@
 import React from 'react';
-import './Cart.css'
+import './Cart.css';
+import {RiDeleteBin6Fill} from 'react-icons/ri';
 
 const Cart = (props) => {
-    console.log(props)
-    const { name,price,img,id }  = props.item
+    // console.log(props)
+    const { name,img}  = props.item
     
     return (
         <div>
@@ -11,7 +12,9 @@ const Cart = (props) => {
             <div className='cart'>
             <img src={img} alt="" />
             <p className="w-75 mx-auto">{name}</p>
-            </div>  
+            <button className='delete-btn'><RiDeleteBin6Fill className='w-2 mx-auto fs-3'/></button>  
+            </div>
+            
         </div>
     );
 };

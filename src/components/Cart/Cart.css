@@ -1,22 +1,23 @@
-.cart{
-    margin-top:20px;
+/* .cart{
+    /* margin-top:20px;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-/* button */
+    padding-left: 10px;
+    padding-right:10px; */
+
 
 .cart img{
     width:80px;
     height: 80px;
     border-radius:70%;
-    padding: 5px;
+    /* margin: 0; */
 }
 
 .btn-choose{
     background-color: black;
     color: antiquewhite;
-    margin: 20px;
+    /* margin: 20px; */
     padding:8px;
 }
 
@@ -29,9 +30,15 @@
     background-color: black;
     color: antiquewhite;
     padding:8px;
+    /* margin-bottom: 20px; */
 }
 .btn-reset:hover{
     background-color:wheat;
     color:blue;
 
+}
+
+.delete-btn{
+    border: none;
+    background-color: rgb(238, 155, 95);
 }
