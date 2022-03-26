@@ -1,0 +1,37 @@
+.cart{
+    margin-top:20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* button */
+
+.cart img{
+    width:80px;
+    height: 80px;
+    border-radius:70%;
+    padding: 5px;
+}
+
+.btn-choose{
+    background-color: black;
+    color: antiquewhite;
+    margin: 20px;
+    padding:8px;
+}
+
+.btn-choose:hover{
+    background-color:wheat;
+    color:blue;
+}
+
+.btn-reset{
+    background-color: black;
+    color: antiquewhite;
+    padding:8px;
+}
+.btn-reset:hover{
+    background-color:wheat;
+    color:blue;
+
+}

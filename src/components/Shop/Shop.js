@@ -37,8 +37,20 @@ const Shop = () => {
         } 
         </div>
             <div className='cart-container'>
-                <h2>Order Summary</h2>
-                <Cart cart ={cart}/>
+                         <div className='mt-5'>
+                            <h3>Selected Shoes </h3>
+                    </div>          
+                        {
+                            cart.map(item => <Cart 
+                                key = {item.id}
+                                item ={item}
+                            ></Cart>)
+                        }
+
+                        <div>
+                            <button className='btn-choose'>Choose 1 item</button> <br />
+                            <button className='btn-reset'>Reset Item</button>
+                        </div>
             </div>
 
         </div>
