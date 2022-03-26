@@ -11,8 +11,8 @@ const Cart = (props) => {
 
             <div className='cart'>
             <img src={img} alt="" />
-            <p className="w-75 mx-auto">{name}</p>
-            <button className='delete-btn'><RiDeleteBin6Fill className='w-2 mx-auto fs-3'/></button>  
+            <p className='p-4'>{name}</p>
+            <button className='delete-btn pt-4'><RiDeleteBin6Fill className='w-2 mx-auto fs-3'/></button>  
             </div>
             
         </div>

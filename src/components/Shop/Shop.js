@@ -8,7 +8,7 @@ const Shop = () => {
 
     const [products , setProducts] = useState([]);
     const [cart,setCart ] = useState([]);
-    
+
     //rendom number
 
     const [random, setRandom] = useState (-1);
@@ -27,13 +27,13 @@ const Shop = () => {
         let exist = cart.find(product =>product.name === props.name)
 
         if(cart.length >=4){
-            alert('click 4  item only')
+            alert(" you added 4 items in your card")
         }
         else if(!exist){
             newCart = [...cart, props]
         }
         else{
-            alert("you already addedd cart")
+            alert("you already added this item in your cart")
             cart.filter(product=> product.name !==props.name);
             newCart = [...cart]
         }
@@ -86,8 +86,8 @@ const Shop = () => {
                         }
 
                         <div>
-                            <button onClick={getRandomNumber} className='btn-choose'>Choose 1 item</button> <br />
-                            <button onClick={handleResetCart} className='btn-reset'>Reset Item</button>
+                            <button onClick={getRandomNumber} className='btn-choose '>Choose 1 item</button> <br />
+                            <button onClick={handleResetCart} className='btn-reset mt-4 mb-4'>Reset Item</button>
                         </div>
             </div>
 
