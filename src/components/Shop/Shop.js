@@ -8,6 +8,7 @@ const Shop = () => {
 
     const [products , setProducts] = useState([]);
     const [cart,setCart ] = useState([]);
+    
     //rendom number
 
     const [random, setRandom] = useState (-1);
